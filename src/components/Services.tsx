@@ -64,13 +64,23 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center mb-12 animate-fade-in-up">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+    <section id="services" className="relative py-24 overflow-hidden">
+      {/* Background with subtle tech image */}
+      <div className="absolute inset-0 bg-secondary/30">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80)',
+          }}
+        />
+      </div>
+      
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             Core Services
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Comprehensive digital marketing solutions tailored to your business needs
           </p>
         </div>
@@ -79,23 +89,28 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in"
+              className="group glass-card hover-lift border-2 animate-scale-in relative overflow-hidden"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <CardHeader>
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <service.icon className="h-6 w-6" />
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg border border-primary/20">
+                  <service.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-lg">{service.title}</CardTitle>
+                <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="mb-4">{service.description}</CardDescription>
-                <Button variant="link" className="h-auto p-0 text-primary" asChild>
+                <CardDescription className="mb-4 leading-relaxed">{service.description}</CardDescription>
+                <Button variant="link" className="h-auto p-0 text-primary font-semibold group-hover:translate-x-1 transition-transform" asChild>
                   <a href={service.link} target="_blank" rel="noopener noreferrer">
                     Learn More →
                   </a>
                 </Button>
               </CardContent>
+              
+              {/* Shimmer effect on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
+              </div>
             </Card>
           ))}
         </div>
