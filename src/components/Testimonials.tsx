@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -23,8 +25,10 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   return (
-    <section className="relative py-24 bg-secondary/20 overflow-hidden">
+    <section ref={ref} className="relative py-24 bg-secondary/20 overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 section-pattern opacity-30" />
       
@@ -50,8 +54,11 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="group relative hover-lift border-2 animate-scale-in shadow-lg hover:shadow-2xl overflow-hidden hover:border-primary/30 bg-card/80 backdrop-blur-sm transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={cn(
+                "group relative hover-lift border-2 shadow-lg hover:shadow-2xl overflow-hidden hover:border-primary/30 bg-card/80 backdrop-blur-sm transition-all duration-300",
+                isVisible && "animate-scale-in"
+              )}
+              style={{ animationDelay: isVisible ? `${index * 0.1}s` : '0s' }}
             >
               {/* Shimmer effect on hover */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />

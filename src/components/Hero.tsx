@@ -1,11 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useParallax } from "@/hooks/useParallax";
 import FloatingIcons from "./FloatingIcons";
 import { heroIcons } from "@/data/floatingIcons";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const parallaxBg = useParallax({ speed: 0.3 });
+  const parallaxOrbs = useParallax({ speed: 0.5 });
+  
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,8 +19,11 @@ const Hero = () => {
       {/* Floating Brand Icons */}
       <FloatingIcons icons={heroIcons} />
       
-      {/* Background image with animated gradient overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* Background image with animated gradient overlay and parallax */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{ transform: `translateY(${parallaxBg}px)` }}
+      >
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40 blur-md"
           style={{
@@ -77,12 +84,27 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Decorative floating elements */}
-      <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-float" />
-      <div className="absolute -right-20 bottom-20 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-accent/20 blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '0.5s' }} />
-      <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-accent/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }} />
+      {/* Decorative floating elements with parallax */}
+      <div 
+        className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-float"
+        style={{ transform: `translateY(${parallaxOrbs * 0.8}px)` }}
+      />
+      <div 
+        className="absolute -right-20 bottom-20 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-float" 
+        style={{ animationDelay: '1s', transform: `translateY(${parallaxOrbs * 1.2}px)` }}
+      />
+      <div 
+        className="absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-accent/20 blur-3xl animate-float" 
+        style={{ animationDelay: '2s', transform: `translateY(${parallaxOrbs}px)` }}
+      />
+      <div 
+        className="absolute top-1/2 right-1/4 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-float" 
+        style={{ animationDelay: '0.5s', transform: `translateY(${parallaxOrbs * 0.6}px)` }}
+      />
+      <div 
+        className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-accent/10 rounded-full blur-2xl animate-float" 
+        style={{ animationDelay: '1.5s', transform: `translateY(${parallaxOrbs * 1.4}px)` }}
+      />
     </section>
   );
 };

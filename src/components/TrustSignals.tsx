@@ -1,5 +1,7 @@
 import { Star, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 import FloatingIcons from "./FloatingIcons";
 import { trustSignalsIcons } from "@/data/floatingIcons";
 
@@ -12,8 +14,10 @@ const trustBadges = [
 
 const TrustSignals = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   return (
-    <section className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
+    <section ref={ref} className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
       {/* Floating Brand Icons */}
       <FloatingIcons icons={trustSignalsIcons} />
       
@@ -41,8 +45,11 @@ const TrustSignals = () => {
           {trustBadges.map((badge, index) => (
             <div 
               key={index}
-              className="group relative flex flex-col items-center justify-center rounded-2xl border-2 bg-card p-10 text-center hover-lift animate-scale-in shadow-lg hover:shadow-2xl overflow-hidden hover:border-primary/30 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={cn(
+                "group relative flex flex-col items-center justify-center rounded-2xl border-2 bg-card p-10 text-center hover-lift shadow-lg hover:shadow-2xl overflow-hidden hover:border-primary/30 transition-all duration-300",
+                isVisible && "animate-scale-in"
+              )}
+              style={{ animationDelay: isVisible ? `${index * 0.1}s` : '0s' }}
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-primary/10 to-transparent" />

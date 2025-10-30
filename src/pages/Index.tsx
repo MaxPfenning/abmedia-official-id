@@ -5,6 +5,7 @@ import TrustSignals from "@/components/TrustSignals";
 import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import Services from "@/components/Services";
+import StatsSection from "@/components/StatsSection";
 import Results from "@/components/Results";
 import Guarantee from "@/components/Guarantee";
 import Testimonials from "@/components/Testimonials";
@@ -14,10 +15,15 @@ import ContactForm from "@/components/ContactForm";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import FloatingActionButton from "@/components/FloatingActionButton";
+import ScrollProgressBar from "@/components/ScrollProgressBar";
+import SocialProofNotification from "@/components/SocialProofNotification";
+import PromotionBanner from "@/components/PromotionBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ScrollProgressBar />
+      <PromotionBanner />
       <ContactBar />
       <UrgencyBanner />
       <Hero />
@@ -25,6 +31,7 @@ const Index = () => {
       <About />
       <HowItWorks />
       <Services />
+      <StatsSection />
       <Results />
       <Guarantee />
       <Testimonials />
@@ -34,6 +41,7 @@ const Index = () => {
       <FinalCTA />
       <Footer />
       <FloatingActionButton />
+      <SocialProofNotification />
     </div>
   );
 };

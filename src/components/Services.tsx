@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   Search, 
   MapPin, 
@@ -9,13 +11,17 @@ import {
   FileText, 
   Globe, 
   Building2, 
-  ShieldCheck 
+  ShieldCheck,
+  CheckCircle2
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import FloatingIcons from "./FloatingIcons";
 import { servicesIcons } from "@/data/floatingIcons";
 
 const Services = () => {
   const { t } = useLanguage();
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const { ref, isVisible } = useScrollAnimation();
 
   const services = [
     {
@@ -56,8 +62,15 @@ const Services = () => {
     }
   ];
 
+  const benefits = [
+    "Increase visibility",
+    "Boost credibility",
+    "Drive more leads",
+    "Track results"
+  ];
+
   return (
-    <section id="services" className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
+    <section ref={ref} id="services" className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
       {/* Floating Brand Icons */}
       <FloatingIcons icons={servicesIcons} />
       
@@ -88,9 +101,15 @@ const Services = () => {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Card 
-              key={index} 
-              className="group glass-card hover-lift border-2 animate-scale-in relative overflow-hidden hover:border-primary/30 hover:shadow-2xl"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              key={index}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+              className={cn(
+                "group glass-card border-2 relative overflow-hidden transition-all duration-300",
+                isVisible && "animate-scale-in",
+                hoveredCard === index ? "scale-105 shadow-2xl border-primary/50 -translate-y-2" : "hover-lift hover:border-primary/30"
+              )}
+              style={{ animationDelay: isVisible ? `${index * 0.05}s` : '0s' }}
             >
               {/* Gradient glow on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 to-accent/5" />
@@ -105,11 +124,40 @@ const Services = () => {
                 </div>
                 <CardTitle className="text-lg font-bold">{t(service.titleKey)}</CardTitle>
               </CardHeader>
+              
               <CardContent className="relative z-10">
                 <CardDescription className="mb-4 leading-relaxed">{t(service.descriptionKey)}</CardDescription>
-                <Button variant="link" className="h-auto p-0 text-primary font-semibold group-hover:translate-x-1 transition-transform" asChild>
+                
+                {/* Expandable benefits section */}
+                <div 
+                  className={cn(
+                    "overflow-hidden transition-all duration-300",
+                    hoveredCard === index ? "max-h-48 opacity-100 mb-4" : "max-h-0 opacity-0"
+                  )}
+                >
+                  <div className="pt-4 border-t border-border/50">
+                    <p className="text-sm font-semibold text-foreground mb-2">Key Benefits:</p>
+                    <ul className="space-y-1">
+                      {benefits.map((benefit, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                
+                <Button 
+                  variant={hoveredCard === index ? "default" : "link"} 
+                  className={cn(
+                    "transition-all duration-300",
+                    hoveredCard === index ? "w-full" : "h-auto p-0 text-primary font-semibold group-hover:translate-x-1"
+                  )} 
+                  asChild
+                >
                   <a href={service.link} target="_blank" rel="noopener noreferrer">
-                    {t('services.learnMore')} →
+                    {hoveredCard === index ? "Get Started" : `${t('services.learnMore')} →`}
                   </a>
                 </Button>
               </CardContent>
