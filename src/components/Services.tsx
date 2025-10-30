@@ -57,12 +57,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="relative py-24 overflow-hidden">
+    <section id="services" className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
       {/* Floating Brand Icons */}
       <FloatingIcons icons={servicesIcons} />
       
       {/* Background with subtle tech image */}
-      <div className="absolute inset-0 bg-secondary/30">
+      <div className="absolute inset-0">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
           style={{

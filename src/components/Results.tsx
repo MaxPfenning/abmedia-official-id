@@ -45,7 +45,7 @@ const Results = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-secondary/30 to-background">
+    <section className="py-24 relative overflow-hidden bg-animated-gradient-success">
       {/* Floating Brand Icons */}
       <FloatingIcons icons={resultsIcons} />
       

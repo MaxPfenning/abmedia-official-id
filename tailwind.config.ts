@@ -184,6 +184,19 @@ export default {
           "0%, 100%": { opacity: "0.2" },
           "50%": { opacity: "0.4" }
         },
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" }
+        },
+        "gradient-rotate": {
+          "0%": { filter: "hue-rotate(0deg)" },
+          "100%": { filter: "hue-rotate(360deg)" }
+        },
+        "gradient-pulse": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -202,6 +215,9 @@ export default {
         "diagonal-float": "diagonal-float 12s ease-in-out infinite",
         "rotate-gentle": "rotate-gentle 15s ease-in-out infinite",
         "pulse-glow": "pulse-glow 6s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 15s ease infinite",
+        "gradient-rotate": "gradient-rotate 30s linear infinite",
+        "gradient-pulse": "gradient-pulse 8s ease-in-out infinite",
       },
     },
   },

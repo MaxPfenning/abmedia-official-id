@@ -29,7 +29,7 @@ const Guarantee = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
+    <section className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />

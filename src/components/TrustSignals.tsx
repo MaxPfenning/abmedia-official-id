@@ -13,7 +13,7 @@ const trustBadges = [
 const TrustSignals = () => {
   const { t } = useLanguage();
   return (
-    <section className="relative py-24 bg-background overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-animated-gradient-subtle">
       {/* Floating Brand Icons */}
       <FloatingIcons icons={trustSignalsIcons} />
       

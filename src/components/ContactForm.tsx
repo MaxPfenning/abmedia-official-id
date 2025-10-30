@@ -27,7 +27,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact-form" className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
+    <section id="contact-form" className="relative py-24 overflow-hidden bg-animated-gradient-warm">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />

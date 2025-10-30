@@ -52,6 +52,14 @@ All colors MUST be HSL.
     --section-bg: 220 14% 98%;
     --glass-bg: 0 0% 100%;
     --glass-border: 220 13% 91%;
+
+    /* Animated gradient color stops */
+    --gradient-color-1: 217 91% 60%;  /* Blue */
+    --gradient-color-2: 224 76% 48%;  /* Deep Blue */
+    --gradient-color-3: 280 70% 55%;  /* Purple */
+    --gradient-color-4: 340 75% 55%;  /* Pink */
+    --gradient-color-5: 180 70% 50%;  /* Teal */
+    --gradient-color-6: 142 71% 45%;  /* Green */
   }
 
   .dark {
@@ -93,6 +101,14 @@ All colors MUST be HSL.
     --hero-gradient-end: 224 76% 48%;
     --trust-badge: 142 71% 45%;
     --section-bg: 217 33% 15%;
+
+    /* Dark mode animated gradient colors */
+    --gradient-color-1: 217 91% 40%;
+    --gradient-color-2: 224 76% 35%;
+    --gradient-color-3: 280 70% 40%;
+    --gradient-color-4: 340 75% 40%;
+    --gradient-color-5: 180 70% 35%;
+    --gradient-color-6: 142 71% 30%;
   }
 }
 
@@ -135,5 +151,79 @@ All colors MUST be HSL.
     background-image: 
       radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.03) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, hsl(var(--accent) / 0.03) 0%, transparent 50%);
+  }
+
+  /* Animated gradient backgrounds */
+  .bg-animated-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-color-1)),
+      hsl(var(--gradient-color-2)),
+      hsl(var(--gradient-color-3)),
+      hsl(var(--gradient-color-1))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+  
+  .bg-animated-gradient-subtle {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)),
+      hsl(var(--gradient-color-1) / 0.05),
+      hsl(var(--gradient-color-5) / 0.05),
+      hsl(var(--background))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 20s ease infinite;
+  }
+  
+  .bg-animated-gradient-vibrant {
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--gradient-color-1)),
+      hsl(var(--gradient-color-3)),
+      hsl(var(--gradient-color-5)),
+      hsl(var(--gradient-color-6))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 12s ease infinite;
+  }
+
+  .bg-animated-gradient-success {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)),
+      hsl(var(--gradient-color-1) / 0.08),
+      hsl(var(--gradient-color-5) / 0.08),
+      hsl(var(--gradient-color-6) / 0.08),
+      hsl(var(--background))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 18s ease infinite;
+  }
+
+  .bg-animated-gradient-warm {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)),
+      hsl(var(--gradient-color-1) / 0.06),
+      hsl(var(--gradient-color-3) / 0.06),
+      hsl(var(--gradient-color-4) / 0.06),
+      hsl(var(--background))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 22s ease infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bg-animated-gradient,
+    .bg-animated-gradient-subtle,
+    .bg-animated-gradient-vibrant,
+    .bg-animated-gradient-success,
+    .bg-animated-gradient-warm {
+      animation: none !important;
+      background-size: 100% 100%;
+    }
   }
 }

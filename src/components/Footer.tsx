@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="relative bg-gradient-to-br from-secondary via-secondary/80 to-background py-16 border-t">
+    <footer id="contact" className="relative bg-animated-gradient-subtle py-16 border-t">
       <div className="container mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}

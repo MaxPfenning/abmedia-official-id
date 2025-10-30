@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Floating Brand Icons */}
       <FloatingIcons icons={heroIcons} />
       
-      {/* Background image with overlay */}
+      {/* Background image with animated gradient overlay */}
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40 blur-md"
@@ -23,7 +23,7 @@ const Hero = () => {
             backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80)',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--hero-gradient-start))]/80 via-[hsl(var(--hero-gradient-overlay))]/70 to-[hsl(var(--hero-gradient-end))]/80" />
+        <div className="absolute inset-0 bg-animated-gradient-vibrant opacity-90" />
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-[hsl(var(--hero-gradient-end))]/40" />
       </div>
       

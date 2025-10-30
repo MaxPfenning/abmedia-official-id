@@ -6,7 +6,7 @@ import { aboutIcons } from "@/data/floatingIcons";
 const About = () => {
   const { t } = useLanguage();
   return (
-    <section className="relative py-24 bg-background overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-animated-gradient-warm">
       {/* Floating Brand Icons */}
       <FloatingIcons icons={aboutIcons} />
       
