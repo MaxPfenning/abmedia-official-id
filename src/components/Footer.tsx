@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, PrinterIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -65,11 +66,26 @@ const Footer = () => {
         <Separator className="my-8" />
         
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
-          <p className="font-medium">© {new Date().getFullYear()} AB Media Team. All rights reserved.</p>
+          <p className="font-medium">© {new Date().getFullYear()} AB Media Team. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <a href="/impressum" className="hover:text-primary transition-all hover:underline underline-offset-4 font-medium">Impressum</a>
-            <a href="/privacy-policy" className="hover:text-primary transition-all hover:underline underline-offset-4 font-medium">Privacy Policy</a>
-            <a href="/terms-of-service" className="hover:text-primary transition-all hover:underline underline-offset-4 font-medium">Terms of Service</a>
+            <Link to="/impressum" className="hover:text-primary transition-colors group relative">
+              <span className="relative">
+                Impressum
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+              </span>
+            </Link>
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors group relative">
+              <span className="relative">
+                Datenschutz
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+              </span>
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-primary transition-colors group relative">
+              <span className="relative">
+                AGB
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+              </span>
+            </Link>
           </div>
         </div>
       </div>

@@ -55,6 +55,11 @@ const FinalCTA = () => {
       {/* Decorative elements */}
       <div className="absolute -left-20 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-white/10 blur-3xl animate-float" />
       <div className="absolute -right-20 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-accent/20 blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+      
+      {/* Additional floating shapes */}
+      <div className="absolute top-10 right-10 w-20 h-20 border-2 border-white/20 rounded-lg rotate-12 animate-float" />
+      <div className="absolute bottom-10 left-10 w-16 h-16 border-2 border-accent/30 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/3 left-1/4 w-12 h-12 bg-white/5 rounded-full blur-xl animate-pulse-slow" />
     </section>
   );
 };

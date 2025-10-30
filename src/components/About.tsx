@@ -6,6 +6,10 @@ const About = () => {
       {/* Background pattern */}
       <div className="absolute inset-0 section-pattern opacity-50" />
       
+      {/* Decorative gradient orbs */}
+      <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-tr from-accent/10 to-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+      
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">

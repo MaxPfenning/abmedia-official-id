@@ -28,6 +28,14 @@ const Testimonials = () => {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 section-pattern opacity-30" />
       
+      {/* Decorative quote marks */}
+      <div className="absolute top-20 left-10 text-9xl text-primary/5 font-serif leading-none select-none">"</div>
+      <div className="absolute bottom-20 right-10 text-9xl text-accent/5 font-serif rotate-180 leading-none select-none">"</div>
+      
+      {/* Decorative orbs */}
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '0.5s' }} />
+      
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
@@ -42,27 +50,30 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="group relative hover-lift border-2 animate-scale-in shadow-lg overflow-hidden"
+              className="group relative hover-lift border-2 animate-scale-in shadow-lg hover:shadow-2xl overflow-hidden hover:border-primary/30 bg-card/80 backdrop-blur-sm transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="pt-8 pb-6 px-6">
-                <div className="mb-6 flex items-center justify-between">
-                  <Quote className="h-10 w-10 text-primary/30 group-hover:text-primary/50 transition-colors" />
-                  <div className="flex gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className="h-4 w-4 fill-yellow-400 text-yellow-400 transition-all group-hover:scale-125" 
-                        style={{ transitionDelay: `${i * 50}ms` }}
-                      />
-                    ))}
-                  </div>
+              {/* Shimmer effect on hover */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+              
+              {/* Decorative quote */}
+              <div className="absolute top-4 right-4 text-6xl text-primary/10 font-serif leading-none select-none">"</div>
+              
+              <CardContent className="pt-8 pb-6 px-8 relative z-10">
+                <div className="mb-6 flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-all group-hover:scale-110 duration-300" 
+                      style={{ transitionDelay: `${i * 30}ms` }}
+                    />
+                  ))}
                 </div>
                 <p className="mb-6 text-base text-muted-foreground italic leading-relaxed">
                   "{testimonial.text}"
                 </p>
-                <div className="border-t pt-4">
-                  <p className="font-bold text-base text-foreground">{testimonial.author}</p>
+                <div className="border-t pt-5 border-border/50">
+                  <p className="font-bold text-lg text-foreground">{testimonial.author}</p>
                   <p className="text-sm text-muted-foreground mt-1">{testimonial.company}</p>
                 </div>
               </CardContent>

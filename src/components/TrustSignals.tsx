@@ -13,6 +13,10 @@ const TrustSignals = () => {
       {/* Background pattern */}
       <div className="absolute inset-0 section-pattern" />
       
+      {/* Decorative gradient orbs */}
+      <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-accent/10 to-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+      
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-success/20 to-success/10 shadow-lg animate-pulse-slow border-2 border-success/20">
@@ -26,25 +30,23 @@ const TrustSignals = () => {
           </p>
         </div>
         
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-16 max-w-5xl mx-auto">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-16 max-w-5xl mx-auto">
           {trustBadges.map((badge, index) => (
             <div 
               key={index}
-              className="group relative flex flex-col items-center justify-center rounded-2xl border-2 bg-card p-8 text-center hover-lift animate-scale-in shadow-md overflow-hidden"
+              className="group relative flex flex-col items-center justify-center rounded-2xl border-2 bg-card p-10 text-center hover-lift animate-scale-in shadow-lg hover:shadow-2xl overflow-hidden hover:border-primary/30 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4 text-5xl font-bold text-gradient">{badge.rating}</div>
-              <div className="mb-3 flex gap-1">
+              {/* Shimmer effect */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+              
+              <div className="mb-5 text-6xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 relative z-10">{badge.rating}</div>
+              <div className="mb-4 flex gap-1 relative z-10">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-transform group-hover:scale-110" style={{ transitionDelay: `${i * 50}ms` }} />
+                  <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400 transition-transform group-hover:scale-110 duration-300" style={{ transitionDelay: `${i * 50}ms` }} />
                 ))}
               </div>
-              <div className="text-sm font-semibold text-muted-foreground">{badge.name}</div>
-              
-              {/* Shimmer effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-shimmer" />
-              </div>
+              <div className="text-base font-bold text-foreground relative z-10">{badge.name}</div>
             </div>
           ))}
         </div>

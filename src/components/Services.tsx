@@ -75,6 +75,10 @@ const Services = () => {
         />
       </div>
       
+      {/* Decorative gradient orbs */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-tr from-accent/10 to-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+      
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
@@ -89,16 +93,23 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group glass-card hover-lift border-2 animate-scale-in relative overflow-hidden"
+              className="group glass-card hover-lift border-2 animate-scale-in relative overflow-hidden hover:border-primary/30 hover:shadow-2xl"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <CardHeader>
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg border border-primary/20">
-                  <service.icon className="h-7 w-7" />
+              {/* Gradient glow on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 to-accent/5" />
+              
+              <CardHeader className="relative z-10">
+                <div className="mb-4 relative">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg border border-primary/20">
+                    <service.icon className="h-7 w-7" />
+                  </div>
+                  {/* Icon glow effect */}
+                  <div className="absolute inset-0 blur-xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <CardDescription className="mb-4 leading-relaxed">{service.description}</CardDescription>
                 <Button variant="link" className="h-auto p-0 text-primary font-semibold group-hover:translate-x-1 transition-transform" asChild>
                   <a href={service.link} target="_blank" rel="noopener noreferrer">
