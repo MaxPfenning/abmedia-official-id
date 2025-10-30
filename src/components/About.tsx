@@ -1,6 +1,8 @@
 import { Target, Users, Award } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative py-24 bg-background overflow-hidden">
       {/* Background pattern */}
@@ -13,10 +15,10 @@ const About = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            About AB Media Team
+            {t('about.heading')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            AB Media Team helps local and international businesses grow their digital presence through trusted SEO, Google My Business, and online reputation services.
+            {t('about.description')}
           </p>
         </div>
         
@@ -25,9 +27,9 @@ const About = () => {
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 border-2 border-primary/20">
               <Target className="h-10 w-10 text-primary group-hover:rotate-12 transition-transform duration-300" />
             </div>
-            <h3 className="mb-3 text-xl font-bold text-foreground">Our Mission</h3>
+            <h3 className="mb-3 text-xl font-bold text-foreground">{t('about.mission.title')}</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Empowering businesses with transparent, effective digital marketing solutions
+              {t('about.mission.description')}
             </p>
           </div>
           
@@ -35,9 +37,9 @@ const About = () => {
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 border-2 border-primary/20">
               <Users className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="mb-3 text-xl font-bold text-foreground">500+ Clients</h3>
+            <h3 className="mb-3 text-xl font-bold text-foreground">{t('about.clients.title')}</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Trusted by verified businesses across Europe
+              {t('about.clients.description')}
             </p>
           </div>
           
@@ -45,9 +47,9 @@ const About = () => {
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 border-2 border-primary/20">
               <Award className="h-10 w-10 text-primary group-hover:rotate-12 transition-transform duration-300" />
             </div>
-            <h3 className="mb-3 text-xl font-bold text-foreground">Proven Results</h3>
+            <h3 className="mb-3 text-xl font-bold text-foreground">{t('about.results.title')}</h3>
             <p className="text-muted-foreground leading-relaxed">
-              4.9-star average rating across all platforms
+              {t('about.results.description')}
             </p>
           </div>
         </div>

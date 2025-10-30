@@ -1,4 +1,5 @@
 import { Star, ShieldCheck } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const trustBadges = [
   { name: "Google Reviews", rating: "4.9" },
@@ -8,6 +9,7 @@ const trustBadges = [
 ];
 
 const TrustSignals = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative py-24 bg-background overflow-hidden">
       {/* Background pattern */}
@@ -23,10 +25,10 @@ const TrustSignals = () => {
             <ShieldCheck className="h-10 w-10 text-success" />
           </div>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Trusted by Businesses Across Europe
+            {t('trustSignals.heading')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Trusted by 500+ verified businesses across Europe
+            {t('trustSignals.subheading')}
           </p>
         </div>
         
@@ -59,12 +61,12 @@ const TrustSignals = () => {
               </div>
             </div>
             <div>
-              <p className="mb-3 text-lg font-bold text-card-foreground">Sample Verified Review</p>
+              <p className="mb-3 text-lg font-bold text-card-foreground">{t('trustSignals.verified')}</p>
               <p className="text-base text-muted-foreground italic leading-relaxed mb-4">
-                "AB Media Team helped us recover our suspended Google My Business listing within 48 hours. Their professionalism and expertise are outstanding. Highly recommended!"
+                "{t('trustSignals.review')}"
               </p>
               <p className="text-sm font-semibold text-muted-foreground">
-                — Tech Solutions GmbH, Berlin
+                — {t('trustSignals.author')}
               </p>
             </div>
           </div>

@@ -1,8 +1,10 @@
 import { AlertCircle, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const UrgencyBanner = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -56,9 +58,9 @@ const UrgencyBanner = () => {
             </div>
             
             <div className="text-white">
-              <p className="font-bold text-lg mb-1">Need Urgent Help?</p>
+              <p className="font-bold text-lg mb-1">{t('urgencyBanner.title')}</p>
               <p className="text-sm text-white/90">
-                Account suspended? Negative reviews? We offer 24-48hr emergency support.
+                {t('urgencyBanner.description')}
               </p>
             </div>
           </div>
@@ -70,7 +72,7 @@ const UrgencyBanner = () => {
           >
             <a href="tel:+492037090726">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now
+              {t('urgencyBanner.cta')}
             </a>
           </Button>
         </div>

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Search, 
   MapPin, 
@@ -11,58 +12,48 @@ import {
   ShieldCheck 
 } from "lucide-react";
 
-const services = [
-  {
-    icon: Search,
-    title: "SEO Services",
-    description: "Improve your search rankings and organic visibility with data-driven SEO strategies.",
-    link: "https://abmedia-team.com/services/seo"
-  },
-  {
-    icon: MapPin,
-    title: "Google My Business Management",
-    description: "Optimize your GMB profile to attract more local customers and boost visibility.",
-    link: "https://abmedia-team.com/services/gmb"
-  },
-  {
-    icon: Star,
-    title: "Review Management",
-    description: "Build trust and credibility with authentic reviews and reputation management.",
-    link: "https://abmedia-team.com/services/reviews"
-  },
-  {
-    icon: Share2,
-    title: "Social Media Marketing",
-    description: "Engage your audience and grow your brand across all social platforms.",
-    link: "https://abmedia-team.com/services/social-media"
-  },
-  {
-    icon: FileText,
-    title: "Content Creation & Marketing",
-    description: "Compelling content that resonates with your audience and drives conversions.",
-    link: "https://abmedia-team.com/services/content"
-  },
-  {
-    icon: Globe,
-    title: "Web Design & Development",
-    description: "Modern, responsive websites built to convert visitors into customers.",
-    link: "https://abmedia-team.com/services/web-design"
-  },
-  {
-    icon: Building2,
-    title: "Business Citations & Listings",
-    description: "Accurate business information across directories for better local SEO.",
-    link: "https://abmedia-team.com/services/citations"
-  },
-  {
-    icon: ShieldCheck,
-    title: "Account Recovery Services",
-    description: "Expert assistance recovering suspended or locked business accounts.",
-    link: "https://abmedia-team.com/services/recovery"
-  }
-];
-
 const Services = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: MapPin,
+      titleKey: "services.items.0.title",
+      descriptionKey: "services.items.0.description",
+      link: "https://abmedia-team.com/services/gmb"
+    },
+    {
+      icon: Star,
+      titleKey: "services.items.1.title",
+      descriptionKey: "services.items.1.description",
+      link: "https://abmedia-team.com/services/reviews"
+    },
+    {
+      icon: Search,
+      titleKey: "services.items.2.title",
+      descriptionKey: "services.items.2.description",
+      link: "https://abmedia-team.com/services/seo"
+    },
+    {
+      icon: Share2,
+      titleKey: "services.items.3.title",
+      descriptionKey: "services.items.3.description",
+      link: "https://abmedia-team.com/services/social-media"
+    },
+    {
+      icon: FileText,
+      titleKey: "services.items.4.title",
+      descriptionKey: "services.items.4.description",
+      link: "https://abmedia-team.com/services/content"
+    },
+    {
+      icon: ShieldCheck,
+      titleKey: "services.items.5.title",
+      descriptionKey: "services.items.5.description",
+      link: "https://abmedia-team.com/services/reputation"
+    }
+  ];
+
   return (
     <section id="services" className="relative py-24 overflow-hidden">
       {/* Background with subtle tech image */}
@@ -82,14 +73,14 @@ const Services = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Core Services
+            {t('services.heading')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Comprehensive digital marketing solutions tailored to your business needs
+            {t('services.subheading')}
           </p>
         </div>
         
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -107,13 +98,13 @@ const Services = () => {
                   {/* Icon glow effect */}
                   <div className="absolute inset-0 blur-xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
+                <CardTitle className="text-lg font-bold">{t(service.titleKey)}</CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
-                <CardDescription className="mb-4 leading-relaxed">{service.description}</CardDescription>
+                <CardDescription className="mb-4 leading-relaxed">{t(service.descriptionKey)}</CardDescription>
                 <Button variant="link" className="h-auto p-0 text-primary font-semibold group-hover:translate-x-1 transition-transform" asChild>
                   <a href={service.link} target="_blank" rel="noopener noreferrer">
-                    Learn More →
+                    {t('services.learnMore')} →
                   </a>
                 </Button>
               </CardContent>

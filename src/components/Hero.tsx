@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -24,19 +26,19 @@ const Hero = () => {
         <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full glass-effect px-5 py-2.5 animate-pulse-slow">
             <Shield className="h-5 w-5 text-white" />
-            <span className="text-sm font-semibold text-white">Trusted by 500+ Businesses</span>
+            <span className="text-sm font-semibold text-white">{t('hero.badge')}</span>
           </div>
           
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl animate-slide-up">
-            Your Online Reputation Matters
+            {t('hero.title')}
           </h1>
           
           <p className="mb-4 text-xl text-white/95 md:text-2xl lg:text-3xl font-semibold animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            Protect, Build & Strengthen Your Digital Presence
+            {t('hero.subtitle')}
           </p>
           
           <p className="mb-10 text-base text-white/90 md:text-lg max-w-3xl mx-auto font-light animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            From suspended accounts to negative reviews – We're AB Media Team, your trusted partner for complete digital marketing solutions
+            {t('hero.description')}
           </p>
           
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -46,7 +48,7 @@ const Hero = () => {
               className="group hover-lift shadow-2xl hover:shadow-3xl text-base md:text-lg px-10 py-7 font-bold"
               onClick={scrollToContact}
             >
-              Get Free Consultation
+              {t('hero.ctaPrimary')}
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
             </Button>
             
@@ -58,14 +60,14 @@ const Hero = () => {
             >
               <a href="tel:+492037090726">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                {t('hero.ctaSecondary')}
               </a>
             </Button>
           </div>
           
           <div className="mt-8 flex items-center justify-center gap-2 text-white/80 text-sm animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Phone className="h-4 w-4" />
-            <span className="font-medium">Emergency Support: 24-48hr Response Time</span>
+            <span className="font-medium">{t('hero.emergency')}</span>
           </div>
         </div>
       </div>

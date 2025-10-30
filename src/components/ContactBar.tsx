@@ -1,6 +1,9 @@
 import { Phone, Mail, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitch from "./LanguageSwitch";
 
 const ContactBar = () => {
+  const { t } = useLanguage();
   const currentHour = new Date().getHours();
   const isBusinessHours = currentHour >= 9 && currentHour < 18;
 
@@ -14,10 +17,10 @@ const ContactBar = () => {
               {isBusinessHours ? (
                 <>
                   <span className="inline-block w-2 h-2 bg-success rounded-full mr-2 animate-pulse" />
-                  We're Available Now
+                  {t('contactBar.available')}
                 </>
               ) : (
-                "Mon-Fri: 9:00 - 18:00"
+                t('contactBar.hours')
               )}
             </span>
           </div>
@@ -40,6 +43,10 @@ const ContactBar = () => {
               <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
               <span className="text-sm font-medium">kontakt.abmedia@gmail.com</span>
             </a>
+
+            <div className="hidden sm:block h-4 w-px bg-white/30" />
+
+            <LanguageSwitch />
           </div>
         </div>
       </div>
