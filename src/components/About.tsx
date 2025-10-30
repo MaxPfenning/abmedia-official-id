@@ -1,10 +1,15 @@
 import { Target, Users, Award } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import FloatingIcons from "./FloatingIcons";
+import { aboutIcons } from "@/data/floatingIcons";
 
 const About = () => {
   const { t } = useLanguage();
   return (
     <section className="relative py-24 bg-background overflow-hidden">
+      {/* Floating Brand Icons */}
+      <FloatingIcons icons={aboutIcons} />
+      
       {/* Background pattern */}
       <div className="absolute inset-0 section-pattern opacity-50" />
       

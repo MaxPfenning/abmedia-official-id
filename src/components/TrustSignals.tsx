@@ -1,5 +1,7 @@
 import { Star, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import FloatingIcons from "./FloatingIcons";
+import { trustSignalsIcons } from "@/data/floatingIcons";
 
 const trustBadges = [
   { name: "Google Reviews", rating: "4.9" },
@@ -12,6 +14,9 @@ const TrustSignals = () => {
   const { t } = useLanguage();
   return (
     <section className="relative py-24 bg-background overflow-hidden">
+      {/* Floating Brand Icons */}
+      <FloatingIcons icons={trustSignalsIcons} />
+      
       {/* Background pattern */}
       <div className="absolute inset-0 section-pattern" />
       

@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import FloatingIcons from "./FloatingIcons";
+import { heroIcons } from "@/data/floatingIcons";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -10,6 +12,9 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden py-24 md:py-40">
+      {/* Floating Brand Icons */}
+      <FloatingIcons icons={heroIcons} />
+      
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div 

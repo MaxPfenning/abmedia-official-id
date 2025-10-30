@@ -11,6 +11,8 @@ import {
   Building2, 
   ShieldCheck 
 } from "lucide-react";
+import FloatingIcons from "./FloatingIcons";
+import { servicesIcons } from "@/data/floatingIcons";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -56,6 +58,9 @@ const Services = () => {
 
   return (
     <section id="services" className="relative py-24 overflow-hidden">
+      {/* Floating Brand Icons */}
+      <FloatingIcons icons={servicesIcons} />
+      
       {/* Background with subtle tech image */}
       <div className="absolute inset-0 bg-secondary/30">
         <div 
