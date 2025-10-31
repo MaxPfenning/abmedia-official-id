@@ -10,16 +10,21 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 const getDefaultLanguage = (): Language => {
-  // 1. Check localStorage
-  const saved = localStorage.getItem('language');
-  if (saved === 'de' || saved === 'en') return saved;
-  
-  // 2. Check browser language
-  const browserLang = navigator.language.toLowerCase();
-  if (browserLang.startsWith('de')) return 'de';
-  
-  // 3. Default to German (primary market)
-  return 'de';
+  try {
+    // 1. Check localStorage
+    const saved = localStorage.getItem('language');
+    if (saved === 'de' || saved === 'en') return saved;
+    
+    // 2. Check browser language
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('de')) return 'de';
+    
+    // 3. Default to German (primary market)
+    return 'de';
+  } catch (error) {
+    // Fallback if localStorage or navigator is not available
+    return 'de';
+  }
 };
 
 const getNestedValue = (obj: any, path: string): string => {
@@ -64,7 +69,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
