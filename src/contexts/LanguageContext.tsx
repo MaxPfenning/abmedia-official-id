@@ -4,7 +4,7 @@ import { translations, Language, TranslationKeys } from '@/i18n/translations';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -27,7 +27,7 @@ const getDefaultLanguage = (): Language => {
   }
 };
 
-const getNestedValue = (obj: any, path: string): string => {
+const getNestedValue = (obj: any, path: string): any => {
   const keys = path.split('.');
   let result = obj;
   
@@ -39,7 +39,7 @@ const getNestedValue = (obj: any, path: string): string => {
     }
   }
   
-  return typeof result === 'string' ? result : path;
+  return result; // Return whatever type it is (string, object, array)
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
@@ -51,7 +51,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     document.documentElement.lang = lang;
   };
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     const translation = translations[language];
     return getNestedValue(translation, key);
   };
