@@ -180,6 +180,7 @@ export const en = {
   faq: {
     heading: "Frequently Asked Questions",
     subheading: "Find answers to common questions about our services",
+    stillHaveQuestions: "Still have questions?",
     contact: "Contact us directly",
     categories: {
       general: {

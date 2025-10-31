@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const testimonials = [
   {
@@ -25,6 +26,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { t } = useLanguage();
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
   
   return (
@@ -43,10 +45,10 @@ const Testimonials = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            What Our Clients Say
+            {t('testimonials.heading')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Real feedback from businesses we've helped grow
+            {t('testimonials.subheading')}
           </p>
         </div>
         

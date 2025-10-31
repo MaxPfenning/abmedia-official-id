@@ -1,6 +1,8 @@
 import { AlertTriangle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Disclaimer = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -13,12 +15,15 @@ const Disclaimer = () => {
                 </div>
               </div>
               <div>
-                <h3 className="mb-3 text-xl font-bold text-card-foreground">Important Notice</h3>
-                <p className="text-base text-muted-foreground leading-relaxed mb-3">
-                  <strong className="text-foreground">AB Media Team</strong> (registered at Weselerstraße 73, 47169 Duisburg, Germany) is <strong className="text-foreground">not affiliated</strong> with other companies using similar names.
-                </p>
+                <h3 className="mb-3 text-xl font-bold text-card-foreground">
+                  {t('disclaimer.title')}
+                </h3>
+                <p 
+                  className="text-base text-muted-foreground leading-relaxed mb-3"
+                  dangerouslySetInnerHTML={{ __html: t('disclaimer.content1') }}
+                />
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  ReviewMeister.net exists solely to clarify our official identity and provide accurate company information for our clients and partners.
+                  {t('disclaimer.content2')}
                 </p>
               </div>
             </div>
