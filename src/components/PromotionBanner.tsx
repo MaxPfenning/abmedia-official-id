@@ -12,42 +12,45 @@ interface Banner {
 }
 
 const PromotionBanner = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isDismissed, setIsDismissed] = useState(false);
 
-  // Get current month for seasonal promotions
-  const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+  // Get current month in the correct language
+  const currentMonth = new Date().toLocaleString(
+    language === 'de' ? 'de-DE' : 'en-US', 
+    { month: 'long' }
+  );
 
   const banners: Banner[] = [
     {
       type: 'seasonal',
-      message: `Get 20% off SEO audits this ${currentMonth}! 🎉`,
+      message: t('promotionBanner.seasonal.message').replace('{month}', currentMonth),
       icon: <Sparkles className="w-5 h-5" />,
       variant: 'success',
-      cta: 'Claim Offer'
+      cta: t('promotionBanner.seasonal.cta')
     },
     {
       type: 'capacity',
-      message: "⚠️ We're 85% booked this month - Only 4 consultation spots remaining!",
+      message: t('promotionBanner.capacity.message'),
       icon: <AlertCircle className="w-5 h-5" />,
       variant: 'warning',
-      cta: 'Book Now'
+      cta: t('promotionBanner.capacity.cta')
     },
     {
       type: 'limited',
-      message: '🎁 Free Google My Business audit - Limited time offer ends soon!',
+      message: t('promotionBanner.limited.message'),
       icon: <Clock className="w-5 h-5" />,
       variant: 'destructive',
-      cta: 'Get Free Audit'
+      cta: t('promotionBanner.limited.cta')
     },
     {
       type: 'social',
-      message: '🚀 Join 500+ businesses who improved their rankings this year',
+      message: t('promotionBanner.social.message'),
       icon: <TrendingUp className="w-5 h-5" />,
       variant: 'default',
-      cta: 'Learn More'
+      cta: t('promotionBanner.social.cta')
     }
   ];
 

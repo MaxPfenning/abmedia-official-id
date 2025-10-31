@@ -340,4 +340,57 @@ export const de = {
     getStarted: "Loslegen",
     contactUs: "Kontaktieren Sie uns",
   },
+
+  stats: {
+    badge: "Nachgewiesene Ergebnisse",
+    heading: "Zahlen, die für sich sprechen",
+    subheading: "Echte Kennzahlen von echten Unternehmen, denen wir beim Online-Wachstum geholfen haben",
+    items: [
+      { label: "Zufriedene Kunden" },
+      { label: "Erfolgsquote" },
+      { label: "Verwaltete Bewertungen" },
+      { label: "Optimierte GMB-Profile" },
+      { label: "Durchschn. Kundenbewertung" },
+      { label: "Durchschn. ROI-Steigerung" }
+    ]
+  },
+
+  promotionBanner: {
+    seasonal: {
+      message: "Erhalten Sie 20% Rabatt auf SEO-Audits im {month}! 🎉",
+      cta: "Angebot Sichern"
+    },
+    capacity: {
+      message: "⚠️ Wir sind zu 85% ausgebucht - Nur noch 4 Beratungsplätze verfügbar!",
+      cta: "Jetzt Buchen"
+    },
+    limited: {
+      message: "🎁 Kostenloses Google My Business Audit - Zeitlich begrenztes Angebot!",
+      cta: "Gratis-Audit Anfordern"
+    },
+    social: {
+      message: "🚀 Schließen Sie sich 500+ Unternehmen an, die ihre Rankings dieses Jahr verbessert haben",
+      cta: "Mehr Erfahren"
+    }
+  },
+
+  socialProof: {
+    actions: [
+      "hat gerade eine Beratung gebucht",
+      "hat ein kostenloses SEO-Audit angefordert",
+      "hat sich für Google My Business Optimierung angemeldet",
+      "hat den Local SEO Leitfaden heruntergeladen",
+      "hat ein Strategiegespräch vereinbart",
+      "ist dem Review-Management-Programm beigetreten",
+      "hat ein Angebot für Reputationsmanagement angefordert",
+      "hat eine Google Ads Beratung gebucht",
+      "hat sich für das monatliche SEO-Paket angemeldet",
+      "hat eine Website-Optimierungs-Überprüfung angefordert"
+    ],
+    timeAgo: {
+      justNow: "Gerade eben",
+      minuteAgo: "Vor 1 Minute",
+      minutesAgo: "Vor {minutes} Minuten"
+    }
+  },
 };

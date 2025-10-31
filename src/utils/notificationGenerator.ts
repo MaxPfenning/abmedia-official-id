@@ -82,21 +82,25 @@ const getAllCities = (): string[] => {
   return Object.values(cities).flat();
 };
 
-export const generateNotification = (): NotificationData => {
+export const generateNotification = (translatedActions: string[]): NotificationData => {
   const name = getRandomElement(getAllNames());
   const city = getRandomElement(getAllCities());
-  const action = getRandomElement(actions);
+  const action = getRandomElement(translatedActions);
   const timestamp = Date.now();
   const id = `notification-${timestamp}-${Math.random().toString(36).substr(2, 9)}`;
 
   return { name, city, action, timestamp, id };
 };
 
-export const getTimeAgo = (timestamp: number): string => {
+export const getTimeAgo = (
+  timestamp: number,
+  translations: { justNow: string; minuteAgo: string; minutesAgo: string }
+): string => {
   const seconds = Math.floor((Date.now() - timestamp) / 1000);
   
-  if (seconds < 60) return 'Just now';
-  if (seconds < 120) return '1 minute ago';
-  if (seconds < 180) return '2 minutes ago';
-  return 'Just now';
+  if (seconds < 60) return translations.justNow;
+  if (seconds < 120) return translations.minuteAgo;
+  if (seconds < 180) return translations.minutesAgo.replace('{minutes}', '2');
+  
+  return translations.justNow;
 };

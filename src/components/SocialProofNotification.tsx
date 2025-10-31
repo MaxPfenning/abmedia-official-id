@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { X, CheckCircle2 } from 'lucide-react';
 import { generateNotification, getTimeAgo, NotificationData } from '@/utils/notificationGenerator';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/i18n/translations';
 
 const SocialProofNotification = () => {
+  const { t, language } = useLanguage();
   const [notifications, setNotifications] = useState<NotificationData[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -17,10 +20,12 @@ const SocialProofNotification = () => {
     // Don't show on mobile or if user prefers reduced motion
     if (isMobile || prefersReducedMotion) return;
 
-    const showNotification = () => {
-      if (isPaused) return;
+  const showNotification = () => {
+    if (isPaused) return;
 
-      const notification = generateNotification();
+    // Get translated actions array directly from translations
+    const actions = translations[language].socialProof.actions;
+    const notification = generateNotification(actions);
       
       setNotifications(prev => [...prev, notification]);
       setIsVisible(true);
@@ -46,7 +51,7 @@ const SocialProofNotification = () => {
       clearTimeout(initialTimeout);
       clearInterval(interval);
     };
-  }, [isPaused, isMobile, prefersReducedMotion]);
+  }, [isPaused, isMobile, prefersReducedMotion, language]);
 
   const dismissNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
@@ -112,7 +117,11 @@ const SocialProofNotification = () => {
 
             {/* Timestamp */}
             <p className="text-xs text-muted-foreground mt-2">
-              {getTimeAgo(notification.timestamp)}
+              {getTimeAgo(notification.timestamp, {
+                justNow: t('socialProof.timeAgo.justNow'),
+                minuteAgo: t('socialProof.timeAgo.minuteAgo'),
+                minutesAgo: t('socialProof.timeAgo.minutesAgo')
+              })}
             </p>
           </div>
         </div>

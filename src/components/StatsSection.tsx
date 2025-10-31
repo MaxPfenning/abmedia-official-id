@@ -9,28 +9,28 @@ const StatsSection = () => {
     {
       end: 500,
       suffix: "+",
-      label: "Satisfied Clients",
+      label: t('stats.items.0.label'),
       icon: <Users className="w-8 h-8" />,
       delay: 0
     },
     {
       end: 95,
       suffix: "%",
-      label: "Success Rate",
+      label: t('stats.items.1.label'),
       icon: <Target className="w-8 h-8" />,
       delay: 200
     },
     {
       end: 2500,
       suffix: "+",
-      label: "Reviews Managed",
+      label: t('stats.items.2.label'),
       icon: <Star className="w-8 h-8" />,
       delay: 400
     },
     {
       end: 150,
       suffix: "+",
-      label: "GMB Profiles Optimized",
+      label: t('stats.items.3.label'),
       icon: <CheckCircle className="w-8 h-8" />,
       delay: 600
     },
@@ -38,14 +38,14 @@ const StatsSection = () => {
       end: 4.9,
       decimals: 1,
       suffix: "★",
-      label: "Average Client Rating",
+      label: t('stats.items.4.label'),
       icon: <Award className="w-8 h-8" />,
       delay: 800
     },
     {
       end: 300,
       suffix: "%",
-      label: "Average ROI Increase",
+      label: t('stats.items.5.label'),
       icon: <TrendingUp className="w-8 h-8" />,
       delay: 1000
     }
@@ -62,13 +62,13 @@ const StatsSection = () => {
         <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold mb-6">
             <TrendingUp className="h-5 w-5" />
-            <span>Proven Results</span>
+            <span>{t('stats.badge')}</span>
           </div>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Numbers That Speak for Themselves
+            {t('stats.heading')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Real metrics from real businesses we've helped grow online
+            {t('stats.subheading')}
           </p>
         </div>
         

@@ -340,4 +340,57 @@ export const en = {
     getStarted: "Get Started",
     contactUs: "Contact Us",
   },
+
+  stats: {
+    badge: "Proven Results",
+    heading: "Numbers That Speak for Themselves",
+    subheading: "Real metrics from real businesses we've helped grow online",
+    items: [
+      { label: "Satisfied Clients" },
+      { label: "Success Rate" },
+      { label: "Reviews Managed" },
+      { label: "GMB Profiles Optimized" },
+      { label: "Average Client Rating" },
+      { label: "Average ROI Increase" }
+    ]
+  },
+
+  promotionBanner: {
+    seasonal: {
+      message: "Get 20% off SEO audits this {month}! 🎉",
+      cta: "Claim Offer"
+    },
+    capacity: {
+      message: "⚠️ We're 85% booked this month - Only 4 consultation spots remaining!",
+      cta: "Book Now"
+    },
+    limited: {
+      message: "🎁 Free Google My Business audit - Limited time offer ends soon!",
+      cta: "Get Free Audit"
+    },
+    social: {
+      message: "🚀 Join 500+ businesses who improved their rankings this year",
+      cta: "Learn More"
+    }
+  },
+
+  socialProof: {
+    actions: [
+      "just booked a consultation",
+      "requested a free SEO audit",
+      "signed up for Google My Business optimization",
+      "downloaded the Local SEO guide",
+      "scheduled a strategy call",
+      "joined the review management program",
+      "requested a reputation management quote",
+      "booked a Google Ads consultation",
+      "signed up for the monthly SEO package",
+      "requested a website optimization review"
+    ],
+    timeAgo: {
+      justNow: "Just now",
+      minuteAgo: "1 minute ago",
+      minutesAgo: "{minutes} minutes ago"
+    }
+  },
 };
