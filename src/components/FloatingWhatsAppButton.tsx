@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const FloatingWhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappNumber = "492037090726"; // +49 203 70907262
+  const whatsappNumber = "4920370907262"; // +49 203 70907262
   const whatsappMessage = encodeURIComponent("Hello, I'm interested in your services!");
 
   useEffect(() => {
