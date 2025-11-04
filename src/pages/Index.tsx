@@ -15,6 +15,7 @@ import ContactForm from "@/components/ContactForm";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import FloatingActionButton from "@/components/FloatingActionButton";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import SocialProofNotification from "@/components/SocialProofNotification";
 import PromotionBanner from "@/components/PromotionBanner";
@@ -40,6 +41,7 @@ const Index = () => {
       <ContactForm />
       <FinalCTA />
       <Footer />
+      <FloatingWhatsAppButton />
       <FloatingActionButton />
       <SocialProofNotification />
     </div>
