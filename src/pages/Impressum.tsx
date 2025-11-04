@@ -31,6 +31,10 @@ const Impressum = () => {
                 <p className="text-lg font-semibold text-foreground">AB Media Team</p>
                 <p>Digital Marketing Services</p>
                 <p>Vertreten durch: <span className="text-foreground font-medium">Andreas Berger</span></p>
+                <p className="text-sm mt-3 pt-3 border-t border-border/50">
+                  <span className="text-muted-foreground">Geschäftstätigkeit unter der Marke:</span>{" "}
+                  <span className="font-medium text-primary">My Review Media</span>
+                </p>
               </div>
             </div>
 

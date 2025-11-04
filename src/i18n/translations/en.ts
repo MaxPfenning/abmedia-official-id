@@ -14,7 +14,7 @@ export const en = {
     badge: "Trusted by 500+ Businesses",
     title: "Your Online Reputation Matters",
     subtitle: "Protect, Build & Strengthen Your Digital Presence",
-    description: "From suspended accounts to negative reviews - We're AB Media Team, your trusted partner for complete digital marketing solutions",
+    description: "From suspended accounts to negative reviews - We're My Review Media, your trusted partner for complete digital marketing solutions",
     ctaPrimary: "Get Free Consultation",
     ctaSecondary: "Call Now",
     emergency: "Emergency Support: 24-48h Response Time",
@@ -24,13 +24,13 @@ export const en = {
     heading: "Trusted by Businesses Nationwide",
     subheading: "Join over 500 satisfied clients",
     verified: "Verified Review",
-    review: "AB Media Team completely transformed our online presence. Their expert team solved our GMB issue in record time and significantly improved our reviews.",
+    review: "My Review Media completely transformed our online presence. Their expert team solved our GMB issue in record time and significantly improved our reviews.",
     author: "Satisfied Business Owner",
   },
   
   about: {
     badge: "About Us",
-    heading: "AB Media Team",
+    heading: "My Review Media",
     description: "We specialize in comprehensive digital marketing solutions, helping businesses protect and grow their online presence.",
     mission: {
       title: "Our Mission",
@@ -248,7 +248,7 @@ export const en = {
   
   disclaimer: {
     title: "Important Notice",
-    content1: "<strong>AB Media Team</strong> (registered at Weselerstraße 73, 47169 Duisburg, Germany) is <strong>not affiliated</strong> with other companies using similar names.",
+    content1: "<strong>My Review Media</strong> (legally registered as AB Media Team at Weselerstraße 73, 47169 Duisburg, Germany) is <strong>not affiliated</strong> with other companies using similar names.",
     content2: "ReviewMeister.net exists solely to clarify our official identity and provide accurate company information for our clients and partners.",
   },
   
@@ -302,7 +302,7 @@ export const en = {
   footer: {
     company: {
       title: "Company",
-      description: "AB Media Team - Your trusted partner for digital marketing solutions in Germany.",
+      description: "My Review Media - Your trusted partner for digital marketing solutions in Germany.",
     },
     contact: {
       title: "Contact",
@@ -324,7 +324,7 @@ export const en = {
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
-    copyright: "© {year} AB Media Team. All rights reserved.",
+    copyright: "© {year} My Review Media. All rights reserved.",
   },
   
   fab: {

@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const testimonials = [
   {
-    text: "Working with AB Media Team transformed our online presence. Our Google rankings improved dramatically within 3 months.",
+    text: "Working with My Review Media transformed our online presence. Our Google rankings improved dramatically within 3 months.",
     author: "Michael Schmidt",
     company: "Schmidt Consulting GmbH",
     rating: 5

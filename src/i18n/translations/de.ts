@@ -14,7 +14,7 @@ export const de = {
     badge: "Vertraut von 500+ Unternehmen",
     title: "Ihre Online-Reputation zählt",
     subtitle: "Schützen, Aufbauen & Stärken Sie Ihre Digitale Präsenz",
-    description: "Von gesperrten Konten bis zu negativen Bewertungen – Wir sind AB Media Team, Ihr vertrauenswürdiger Partner für vollständige Digital Marketing Lösungen",
+    description: "Von gesperrten Konten bis zu negativen Bewertungen – Wir sind My Review Media, Ihr vertrauenswürdiger Partner für vollständige Digital Marketing Lösungen",
     ctaPrimary: "Kostenlose Beratung erhalten",
     ctaSecondary: "Jetzt anrufen",
     emergency: "Notfall-Support: 24-48h Reaktionszeit",
@@ -24,13 +24,13 @@ export const de = {
     heading: "Vertraut von Unternehmen bundesweit",
     subheading: "Beitrittend zu über 500 zufriedenen Kunden",
     verified: "Verifizierte Bewertung",
-    review: "AB Media Team hat unsere Online-Präsenz komplett transformiert. Ihr Expertenteam hat unser GMB-Problem in Rekordzeit gelöst und unsere Bewertungen deutlich verbessert.",
+    review: "My Review Media hat unsere Online-Präsenz komplett transformiert. Ihr Expertenteam hat unser GMB-Problem in Rekordzeit gelöst und unsere Bewertungen deutlich verbessert.",
     author: "Zufriedener Geschäftsinhaber",
   },
   
   about: {
     badge: "Über Uns",
-    heading: "AB Media Team",
+    heading: "My Review Media",
     description: "Wir sind auf umfassende digitale Marketing-Lösungen spezialisiert und helfen Unternehmen dabei, ihre Online-Präsenz zu schützen und auszubauen.",
     mission: {
       title: "Unsere Mission",
@@ -248,7 +248,7 @@ export const de = {
   
   disclaimer: {
     title: "Wichtiger Hinweis",
-    content1: "<strong>AB Media Team</strong> (eingetragen unter Weselerstraße 73, 47169 Duisburg, Deutschland) ist <strong>nicht verbunden</strong> mit anderen Unternehmen, die ähnliche Namen verwenden.",
+    content1: "<strong>My Review Media</strong> (rechtlich registriert als AB Media Team unter Weselerstraße 73, 47169 Duisburg, Deutschland) ist <strong>nicht verbunden</strong> mit anderen Unternehmen, die ähnliche Namen verwenden.",
     content2: "ReviewMeister.net existiert ausschließlich, um unsere offizielle Identität zu klären und genaue Unternehmensinformationen für unsere Kunden und Partner bereitzustellen.",
   },
   
@@ -302,7 +302,7 @@ export const de = {
   footer: {
     company: {
       title: "Unternehmen",
-      description: "AB Media Team - Ihr vertrauenswürdiger Partner für digitale Marketing-Lösungen in Deutschland.",
+      description: "My Review Media - Ihr vertrauenswürdiger Partner für digitale Marketing-Lösungen in Deutschland.",
     },
     contact: {
       title: "Kontakt",
@@ -324,7 +324,7 @@ export const de = {
       privacy: "Datenschutz",
       terms: "AGB",
     },
-    copyright: "© {year} AB Media Team. Alle Rechte vorbehalten.",
+    copyright: "© {year} My Review Media. Alle Rechte vorbehalten.",
   },
   
   fab: {
