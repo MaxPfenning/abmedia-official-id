@@ -197,6 +197,11 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.8" }
         },
+        "shake": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "10%, 30%, 50%, 70%, 90%": { transform: "translateX(-2px)" },
+          "20%, 40%, 60%, 80%": { transform: "translateX(2px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -218,6 +223,7 @@ export default {
         "gradient-shift": "gradient-shift 15s ease infinite",
         "gradient-rotate": "gradient-rotate 30s linear infinite",
         "gradient-pulse": "gradient-pulse 8s ease-in-out infinite",
+        "shake": "shake 0.5s ease-in-out",
       },
     },
   },
