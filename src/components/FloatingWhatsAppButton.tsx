@@ -28,9 +28,10 @@ const FloatingWhatsAppButton = () => {
     >
       <Button
         size="lg"
-        className="h-16 w-16 rounded-full shadow-2xl bg-[#25D366] hover:bg-[#20BA5A] hover:scale-110 transition-all duration-300 animate-pulse-slow"
+        className="rounded-full px-6 py-4 shadow-2xl bg-[#25D366] hover:bg-[#20BA5A] hover:scale-110 transition-all duration-300 animate-pulse-slow"
       >
         <MessageCircle className="h-6 w-6 text-white" />
+        <span className="text-white font-semibold text-base">WhatsApp</span>
       </Button>
     </a>
   );
