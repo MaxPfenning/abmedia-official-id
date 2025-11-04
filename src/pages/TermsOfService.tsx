@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const TermsOfService = () => {
   useEffect(() => {
-    document.title = "Allgemeine Geschäftsbedingungen - My Review Media | ReviewMeister.net";
+    document.title = "Allgemeine Geschäftsbedingungen - My Review Media";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

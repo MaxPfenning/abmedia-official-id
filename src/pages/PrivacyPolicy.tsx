@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-    document.title = "Datenschutzerklärung - My Review Media | ReviewMeister.net";
+    document.title = "Datenschutzerklärung - My Review Media";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

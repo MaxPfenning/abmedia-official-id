@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://reviewmeister.net/sitemap.xml
+Sitemap: https://myreviewmedia.com/sitemap.xml

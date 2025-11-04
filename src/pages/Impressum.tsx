@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const Impressum = () => {
   useEffect(() => {
-    document.title = "Impressum - My Review Media | ReviewMeister.net";
+    document.title = "Impressum - My Review Media";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

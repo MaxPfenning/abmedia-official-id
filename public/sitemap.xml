@@ -4,46 +4,46 @@
   
   <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://reviewmeister.net/</loc>
+    <loc>https://myreviewmedia.com/</loc>
     <lastmod>2025-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://reviewmeister.net/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://reviewmeister.net/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://reviewmeister.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myreviewmedia.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myreviewmedia.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myreviewmedia.com/"/>
   </url>
   
   <!-- Impressum Page -->
   <url>
-    <loc>https://reviewmeister.net/impressum</loc>
+    <loc>https://myreviewmedia.com/impressum</loc>
     <lastmod>2025-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://reviewmeister.net/impressum?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://reviewmeister.net/impressum?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://reviewmeister.net/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myreviewmedia.com/impressum?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myreviewmedia.com/impressum?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myreviewmedia.com/impressum"/>
   </url>
   
   <!-- Privacy Policy Page -->
   <url>
-    <loc>https://reviewmeister.net/privacy-policy</loc>
+    <loc>https://myreviewmedia.com/privacy-policy</loc>
     <lastmod>2025-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://reviewmeister.net/privacy-policy?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://reviewmeister.net/privacy-policy?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://reviewmeister.net/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myreviewmedia.com/privacy-policy?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myreviewmedia.com/privacy-policy?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myreviewmedia.com/privacy-policy"/>
   </url>
   
   <!-- Terms of Service Page -->
   <url>
-    <loc>https://reviewmeister.net/terms-of-service</loc>
+    <loc>https://myreviewmedia.com/terms-of-service</loc>
     <lastmod>2025-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://reviewmeister.net/terms-of-service?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://reviewmeister.net/terms-of-service?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://reviewmeister.net/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myreviewmedia.com/terms-of-service?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myreviewmedia.com/terms-of-service?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myreviewmedia.com/terms-of-service"/>
   </url>
   
 </urlset>
