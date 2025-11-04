@@ -1,7 +1,17 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    document.title = "Datenschutzerklärung - My Review Media | ReviewMeister.net";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Privacy policy for My Review Media. Learn how we protect your data and comply with GDPR regulations.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}

@@ -1,7 +1,17 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Impressum = () => {
+  useEffect(() => {
+    document.title = "Impressum - My Review Media | ReviewMeister.net";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Legal information and company details for My Review Media (AB Media Team) - Digital marketing services in Duisburg, Germany.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}

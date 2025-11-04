@@ -1,7 +1,17 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const TermsOfService = () => {
+  useEffect(() => {
+    document.title = "Allgemeine Geschäftsbedingungen - My Review Media | ReviewMeister.net";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Terms of service for My Review Media digital marketing services. Read our service agreements and policies.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
