@@ -40,7 +40,7 @@ const UrgencyBanner = () => {
 
   return (
     <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-slide-up max-w-2xl w-full mx-4">
-      <div className="relative border-2 border-success bg-success rounded-2xl shadow-2xl p-4 md:p-6">
+      <div className="relative border-2 border-primary bg-primary rounded-2xl shadow-2xl p-4 md:p-6">
         <button
           onClick={handleDismiss}
           className="absolute top-2 right-2 p-1 rounded-full hover:bg-white/20 transition-colors"
