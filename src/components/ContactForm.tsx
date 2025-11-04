@@ -7,23 +7,83 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
+  email: z.string().trim().email("Invalid email address").max(255),
+  phone: z.string().trim().max(50).optional(),
+  service: z.string().min(1, "Please select a service"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000),
+});
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Validate form data
+      const validatedData = contactSchema.parse(formData);
+      
+      // Call edge function
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify(validatedData),
+        }
+      );
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to send message");
+      }
+      
+      // Success!
       toast({
         title: "Message sent successfully!",
-        description: "We'll respond within 24 hours.",
+        description: "We'll respond within 24 hours. Check your email for confirmation.",
       });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+      
+      // Reset the HTML form
+      (e.target as HTMLFormElement).reset();
+      
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error sending message",
+        description: error instanceof z.ZodError 
+          ? error.errors[0].message 
+          : "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -94,35 +154,58 @@ const ContactForm = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name">Full Name *</Label>
-                        <Input id="name" required placeholder="John Doe" />
+                        <Input 
+                          id="name" 
+                          required 
+                          placeholder="John Doe"
+                          value={formData.name}
+                          onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                        />
                       </div>
                       
                       <div className="space-y-2">
                         <Label htmlFor="email">Email Address *</Label>
-                        <Input id="email" type="email" required placeholder="john@example.com" />
+                        <Input 
+                          id="email" 
+                          type="email" 
+                          required 
+                          placeholder="john@example.com"
+                          value={formData.email}
+                          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        />
                       </div>
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="phone">Phone Number</Label>
-                        <Input id="phone" type="tel" placeholder="+49 123 456789" />
+                        <Input 
+                          id="phone" 
+                          type="tel" 
+                          placeholder="+49 123 456789"
+                          value={formData.phone}
+                          onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                        />
                       </div>
                       
                       <div className="space-y-2">
                         <Label htmlFor="service">Service Needed *</Label>
-                        <Select required>
+                        <Select 
+                          required 
+                          value={formData.service}
+                          onValueChange={(value) => setFormData(prev => ({ ...prev, service: value }))}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="seo">SEO Services</SelectItem>
-                            <SelectItem value="gmb">Google My Business</SelectItem>
-                            <SelectItem value="reviews">Review Management</SelectItem>
-                            <SelectItem value="social">Social Media Marketing</SelectItem>
-                            <SelectItem value="web">Web Design</SelectItem>
-                            <SelectItem value="recovery">Account Recovery</SelectItem>
-                            <SelectItem value="other">Other / Not Sure</SelectItem>
+                            <SelectItem value="SEO Services">SEO Services</SelectItem>
+                            <SelectItem value="Google My Business">Google My Business</SelectItem>
+                            <SelectItem value="Review Management">Review Management</SelectItem>
+                            <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
+                            <SelectItem value="Web Design">Web Design</SelectItem>
+                            <SelectItem value="Account Recovery">Account Recovery</SelectItem>
+                            <SelectItem value="Other / Not Sure">Other / Not Sure</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -135,6 +218,8 @@ const ContactForm = () => {
                         required 
                         placeholder="Describe your current situation and what you're looking to achieve..."
                         rows={6}
+                        value={formData.message}
+                        onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                       />
                     </div>
                     
