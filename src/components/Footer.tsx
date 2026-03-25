@@ -48,9 +48,9 @@ const Footer = () => {
             <div className="flex items-start gap-2 text-sm">
               <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
               <address className="not-italic text-muted-foreground">
-                Weselerstraße 73<br />
-                47169 Duisburg<br />
-                Germany
+                Spitalerstraße 23<br />
+                20095 Hamburg<br />
+                Deutschland
               </address>
             </div>
           </div>
