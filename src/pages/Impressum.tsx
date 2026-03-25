@@ -38,13 +38,9 @@ const Impressum = () => {
             <div className="animate-fade-in-up">
               <h2 className="text-2xl font-bold text-foreground mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="space-y-2 text-muted-foreground">
-                <p className="text-lg font-semibold text-foreground">AB Media Team</p>
+                <p className="text-lg font-semibold text-foreground">My Review Media</p>
                 <p>Digital Marketing Services</p>
-                <p>Vertreten durch: <span className="text-foreground font-medium">Andreas Berger</span></p>
-                <p className="text-sm mt-3 pt-3 border-t border-border/50">
-                  <span className="text-muted-foreground">Geschäftstätigkeit unter der Marke:</span>{" "}
-                  <span className="font-medium text-primary">My Review Media</span>
-                </p>
+                <p>Vertreten durch: <span className="text-foreground font-medium">Alice Berger</span></p>
               </div>
             </div>
 
