@@ -37,11 +37,11 @@ const ContactBar = () => {
             <div className="hidden sm:block h-4 w-px bg-white/30" />
             
             <a 
-              href="mailto:kontakt.abmedia@gmail.com" 
+              href="mailto:alice@myreviewmedia.com" 
               className="flex items-center gap-2 hover:opacity-80 transition-opacity group"
             >
               <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
-              <span className="text-sm font-medium">kontakt.abmedia@gmail.com</span>
+              <span className="text-sm font-medium">alice@myreviewmedia.com</span>
             </a>
 
             <div className="hidden sm:block h-4 w-px bg-white/30" />

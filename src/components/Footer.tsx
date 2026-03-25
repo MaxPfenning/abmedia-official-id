@@ -35,8 +35,8 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-2 group">
                 <Mail className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary group-hover:scale-110 transition-transform" />
-                <a href="mailto:kontakt.abmedia@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all font-medium">
-                  kontakt.abmedia@gmail.com
+                <a href="mailto:alice@myreviewmedia.com" className="text-muted-foreground hover:text-primary transition-colors break-all font-medium">
+                  alice@myreviewmedia.com
                 </a>
               </div>
             </div>
@@ -48,9 +48,9 @@ const Footer = () => {
             <div className="flex items-start gap-2 text-sm">
               <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
               <address className="not-italic text-muted-foreground">
-                Weselerstraße 73<br />
-                47169 Duisburg<br />
-                Germany
+                Spitalerstraße 23<br />
+                20095 Hamburg<br />
+                Deutschland
               </address>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
             <h3 className="mb-4 text-xl font-bold text-foreground">{t('footer.legal.title')}</h3>
             <div className="space-y-1 text-sm text-muted-foreground">
-              <p>{t('footer.legal.representative')}: Andreas Berger</p>
+              <p>{t('footer.legal.representative')}: Alice Berger</p>
               <p>Betriebsnummer: 10750003655</p>
               <p>USt-IdNr: DE 7909418491</p>
             </div>

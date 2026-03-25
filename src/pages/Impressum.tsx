@@ -8,7 +8,7 @@ const Impressum = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Legal information and company details for My Review Media (AB Media Team) - Digital marketing services in Duisburg, Germany.');
+      metaDescription.setAttribute('content', 'Legal information and company details for My Review Media - Digital marketing services in Hamburg, Germany.');
     }
   }, []);
 
@@ -38,13 +38,9 @@ const Impressum = () => {
             <div className="animate-fade-in-up">
               <h2 className="text-2xl font-bold text-foreground mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="space-y-2 text-muted-foreground">
-                <p className="text-lg font-semibold text-foreground">AB Media Team</p>
+                <p className="text-lg font-semibold text-foreground">My Review Media</p>
                 <p>Digital Marketing Services</p>
-                <p>Vertreten durch: <span className="text-foreground font-medium">Andreas Berger</span></p>
-                <p className="text-sm mt-3 pt-3 border-t border-border/50">
-                  <span className="text-muted-foreground">Geschäftstätigkeit unter der Marke:</span>{" "}
-                  <span className="font-medium text-primary">My Review Media</span>
-                </p>
+                <p>Vertreten durch: <span className="text-foreground font-medium">Alice Berger</span></p>
               </div>
             </div>
 
@@ -52,8 +48,8 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Anschrift:</h3>
               <div className="space-y-1 text-muted-foreground">
-                <p>Weselerstraße 73</p>
-                <p>47169 Duisburg</p>
+                <p>Spitalerstraße 23</p>
+                <p>20095 Hamburg</p>
                 <p>Deutschland</p>
               </div>
             </div>
@@ -64,7 +60,7 @@ const Impressum = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p>Telefon: <a href="tel:+492037090726" className="text-primary hover:underline">+49 203 70907262</a></p>
                 <p>Fax: +49 203 70907353</p>
-                <p>E-Mail: <a href="mailto:kontakt.abmedia@gmail.com" className="text-primary hover:underline">kontakt.abmedia@gmail.com</a></p>
+                <p>E-Mail: <a href="mailto:alice@myreviewmedia.com" className="text-primary hover:underline">alice@myreviewmedia.com</a></p>
               </div>
             </div>
 
@@ -82,10 +78,10 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
               <div className="space-y-1 text-muted-foreground">
-                <p className="font-medium text-foreground">Andreas Berger</p>
-                <p>AB Media Team</p>
-                <p>Weselerstraße 73</p>
-                <p>47169 Duisburg</p>
+                <p className="font-medium text-foreground">Alice Berger</p>
+                <p>My Review Media</p>
+                <p>Spitalerstraße 23</p>
+                <p>20095 Hamburg</p>
                 <p>Deutschland</p>
               </div>
             </div>
