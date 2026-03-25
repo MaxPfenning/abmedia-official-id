@@ -171,7 +171,7 @@ const getTeamEmailHTML = (name: string, email: string, phone: string | undefined
                     ⏰ Received: ${new Date().toLocaleString('en-US', { timeZone: 'Europe/Berlin', dateStyle: 'medium', timeStyle: 'short' })} CET
                   </p>
                   <p style="margin: 12px 0 0 0; color: #9ca3af; font-size: 12px; text-align: center;">
-                    My Review Media | Weselerstraße 73, 47169 Duisburg, Germany
+                    My Review Media | Spitalerstraße 23, 20095 Hamburg, Germany
                   </p>
                 </td>
               </tr>
