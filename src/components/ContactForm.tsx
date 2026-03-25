@@ -125,8 +125,8 @@ const ContactForm = () => {
                 <CardContent className="pt-6">
                   <Mail className="h-8 w-8 text-primary mb-4" />
                   <h3 className="font-bold text-lg mb-2">Email Us</h3>
-                  <a href="mailto:kontakt.abmedia@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all font-medium">
-                    kontakt.abmedia@gmail.com
+                  <a href="mailto:alice@myreviewmedia.com" className="text-muted-foreground hover:text-primary transition-colors break-all font-medium">
+                    alice@myreviewmedia.com
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">24/7 Email Support</p>
                 </CardContent>
