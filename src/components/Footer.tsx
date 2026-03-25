@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
             <h3 className="mb-4 text-xl font-bold text-foreground">{t('footer.legal.title')}</h3>
             <div className="space-y-1 text-sm text-muted-foreground">
-              <p>{t('footer.legal.representative')}: Andreas Berger</p>
+              <p>{t('footer.legal.representative')}: Alice Berger</p>
               <p>Betriebsnummer: 10750003655</p>
               <p>USt-IdNr: DE 7909418491</p>
             </div>

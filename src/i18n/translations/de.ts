@@ -248,7 +248,7 @@ export const de = {
   
   disclaimer: {
     title: "Wichtiger Hinweis",
-    content1: "<strong>My Review Media</strong> (rechtlich registriert als AB Media Team unter Weselerstraße 73, 47169 Duisburg, Deutschland) ist <strong>nicht verbunden</strong> mit anderen Unternehmen, die ähnliche Namen verwenden.",
+    content1: "<strong>My Review Media</strong> (Spitalerstraße 23, 20095 Hamburg, Deutschland) ist <strong>nicht verbunden</strong> mit anderen Unternehmen, die ähnliche Namen verwenden.",
     content2: "Diese Website existiert ausschließlich, um unsere offizielle Identität als My Review Media zu klären und genaue Unternehmensinformationen für unsere Kunden und Partner bereitzustellen.",
   },
   

@@ -137,9 +137,9 @@ const ContactForm = () => {
                   <MapPin className="h-8 w-8 text-primary mb-4" />
                   <h3 className="font-bold text-lg mb-2">Visit Us</h3>
                   <address className="not-italic text-muted-foreground">
-                    Weselerstraße 73<br />
-                    47169 Duisburg<br />
-                    Germany
+                    Spitalerstraße 23<br />
+                    20095 Hamburg<br />
+                    Deutschland
                   </address>
                 </CardContent>
               </Card>

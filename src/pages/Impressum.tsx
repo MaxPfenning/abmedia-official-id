@@ -78,10 +78,10 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
               <div className="space-y-1 text-muted-foreground">
-                <p className="font-medium text-foreground">Andreas Berger</p>
-                <p>AB Media Team</p>
-                <p>Weselerstraße 73</p>
-                <p>47169 Duisburg</p>
+                <p className="font-medium text-foreground">Alice Berger</p>
+                <p>My Review Media</p>
+                <p>Spitalerstraße 23</p>
+                <p>20095 Hamburg</p>
                 <p>Deutschland</p>
               </div>
             </div>

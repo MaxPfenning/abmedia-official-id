@@ -59,7 +59,7 @@ const FAQ = () => {
             {t('faq.stillHaveQuestions')}
           </p>
           <a 
-            href="mailto:kontakt.abmedia@gmail.com" 
+            href="mailto:alice@myreviewmedia.com" 
             className="text-primary font-semibold hover:underline text-lg"
           >
             {t('faq.contact')} →
