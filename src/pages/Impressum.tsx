@@ -60,7 +60,7 @@ const Impressum = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p>Telefon: <a href="tel:+492037090726" className="text-primary hover:underline">+49 203 70907262</a></p>
                 <p>Fax: +49 203 70907353</p>
-                <p>E-Mail: <a href="mailto:kontakt.abmedia@gmail.com" className="text-primary hover:underline">kontakt.abmedia@gmail.com</a></p>
+                <p>E-Mail: <a href="mailto:alice@myreviewmedia.com" className="text-primary hover:underline">alice@myreviewmedia.com</a></p>
               </div>
             </div>
 
