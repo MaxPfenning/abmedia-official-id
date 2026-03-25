@@ -8,7 +8,7 @@ const Impressum = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Legal information and company details for My Review Media (AB Media Team) - Digital marketing services in Duisburg, Germany.');
+      metaDescription.setAttribute('content', 'Legal information and company details for My Review Media - Digital marketing services in Hamburg, Germany.');
     }
   }, []);
 
