@@ -48,8 +48,8 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Anschrift:</h3>
               <div className="space-y-1 text-muted-foreground">
-                <p>Weselerstraße 73</p>
-                <p>47169 Duisburg</p>
+                <p>Spitalerstraße 23</p>
+                <p>20095 Hamburg</p>
                 <p>Deutschland</p>
               </div>
             </div>
