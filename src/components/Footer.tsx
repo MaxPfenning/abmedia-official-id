@@ -48,9 +48,9 @@ const Footer = () => {
             <div className="flex items-start gap-2 text-sm">
               <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
               <address className="not-italic text-muted-foreground">
-                Spitalerstraße 23<br />
-                20095 Hamburg<br />
-                Deutschland
+                23 Grosvenor St<br />
+                London, England<br />
+                W1K 4QJ
               </address>
             </div>
           </div>
@@ -59,6 +59,8 @@ const Footer = () => {
           <div className="animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
             <h3 className="mb-4 text-xl font-bold text-foreground">{t('footer.legal.title')}</h3>
             <div className="space-y-1 text-sm text-muted-foreground">
+              <p className="font-medium text-foreground">AB MEDIA TEAM LTD</p>
+              <p>Company number: 15746871</p>
               <p>{t('footer.legal.representative')}: Alice Berger</p>
               <p>Betriebsnummer: 10750003655</p>
               <p>USt-IdNr: DE 7909418491</p>

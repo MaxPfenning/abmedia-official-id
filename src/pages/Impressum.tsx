@@ -4,11 +4,11 @@ import { useEffect } from "react";
 
 const Impressum = () => {
   useEffect(() => {
-    document.title = "Impressum - My Review Media";
+    document.title = "Impressum - AB MEDIA TEAM LTD";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Legal information and company details for My Review Media - Digital marketing services in Hamburg, Germany.');
+      metaDescription.setAttribute('content', 'Legal information and company details for AB MEDIA TEAM LTD, company number 15746871, in London, England.');
     }
   }, []);
 
@@ -38,7 +38,7 @@ const Impressum = () => {
             <div className="animate-fade-in-up">
               <h2 className="text-2xl font-bold text-foreground mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="space-y-2 text-muted-foreground">
-                <p className="text-lg font-semibold text-foreground">My Review Media</p>
+                <p className="text-lg font-semibold text-foreground">AB MEDIA TEAM LTD</p>
                 <p>Digital Marketing Services</p>
                 <p>Vertreten durch: <span className="text-foreground font-medium">Alice Berger</span></p>
               </div>
@@ -48,9 +48,9 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Anschrift:</h3>
               <div className="space-y-1 text-muted-foreground">
-                <p>Spitalerstraße 23</p>
-                <p>20095 Hamburg</p>
-                <p>Deutschland</p>
+                <p>23 Grosvenor St</p>
+                <p>London, England</p>
+                <p>W1K 4QJ</p>
               </div>
             </div>
 
@@ -68,6 +68,7 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Registrierungsnummern:</h3>
               <div className="space-y-2 text-muted-foreground">
+                <p>Company number: 15746871</p>
                 <p>Betriebsnummer: 10750003655</p>
                 <p>Umsatzsteuer-Identifikationsnummer (USt-IdNr.): DE 7909418491</p>
                 <p className="mt-3">Zuständig für: Deutschland</p>
@@ -79,10 +80,10 @@ const Impressum = () => {
               <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
               <div className="space-y-1 text-muted-foreground">
                 <p className="font-medium text-foreground">Alice Berger</p>
-                <p>My Review Media</p>
-                <p>Spitalerstraße 23</p>
-                <p>20095 Hamburg</p>
-                <p>Deutschland</p>
+                <p>AB MEDIA TEAM LTD</p>
+                <p>23 Grosvenor St</p>
+                <p>London, England</p>
+                <p>W1K 4QJ</p>
               </div>
             </div>
 
