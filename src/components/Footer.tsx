@@ -65,6 +65,16 @@ const Footer = () => {
               <p>Betriebsnummer: 10750003655</p>
               <p>USt-IdNr: DE 7909418491</p>
             </div>
+             <div className="mt-5 border-t border-border pt-4">
+               <h4 className="mb-2 font-semibold text-foreground">Bankverbindung</h4>
+               <div className="space-y-1 text-sm text-muted-foreground">
+                 <p>Bank: Wise Europe SA</p>
+                 <p className="break-words">IBAN: BE54 9059 9786 7497</p>
+                 <p>SWIFT/BIC: TRWIBEB1XXX</p>
+                 <p>Bankleitzahl: 905</p>
+                 <p>Kontonummer: 905997867497</p>
+               </div>
+             </div>
           </div>
         </div>
         

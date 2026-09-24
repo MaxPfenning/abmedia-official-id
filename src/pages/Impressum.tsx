@@ -79,8 +79,20 @@ const Impressum = () => {
               </div>
             </div>
 
+             {/* Bankverbindung */}
+             <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+               <h3 className="text-xl font-bold text-foreground mb-3">Bankverbindung:</h3>
+               <div className="space-y-2 text-muted-foreground">
+                 <p>Bank: <span className="text-foreground font-medium">Wise Europe SA</span></p>
+                 <p className="break-words">IBAN: <span className="text-foreground font-medium">BE54 9059 9786 7497</span></p>
+                 <p>SWIFT/BIC: <span className="text-foreground font-medium">TRWIBEB1XXX</span></p>
+                 <p>Bankleitzahl: <span className="text-foreground font-medium">905</span></p>
+                 <p>Kontonummer: <span className="text-foreground font-medium">905997867497</span></p>
+               </div>
+             </div>
+
             {/* Verantwortlich für den Inhalt */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+             <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
               <div className="space-y-1 text-muted-foreground">
                 <p className="font-medium text-foreground">Selmin Huzbasic</p>
@@ -92,7 +104,7 @@ const Impressum = () => {
             </div>
 
             {/* Haftungsausschluss */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+             <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               <h2 className="text-2xl font-bold text-foreground mb-4">Haftungsausschluss (Disclaimer)</h2>
               
               <h3 className="text-xl font-bold text-foreground mb-3 mt-6">Haftung für Inhalte:</h3>
@@ -109,7 +121,7 @@ const Impressum = () => {
             </div>
 
             {/* Urheberrecht */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+             <div className="animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
               <h2 className="text-2xl font-bold text-foreground mb-4">Urheberrecht</h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
@@ -118,7 +130,7 @@ const Impressum = () => {
             </div>
 
             {/* VSBG */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+             <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
               <h2 className="text-2xl font-bold text-foreground mb-4">Information gemäß § 36 VSBG</h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>Gemäß § 36 Verbraucherstreitbeilegungsgesetz (VSBG) sind wir weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
@@ -127,7 +139,7 @@ const Impressum = () => {
             </div>
 
             {/* Datenschutz */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+             <div className="animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
               <h2 className="text-2xl font-bold text-foreground mb-4">Datenschutz (DSGVO-Hinweis)</h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Personenbezogene Daten (z. B. Name, E-Mail, Telefonnummer) werden nur erhoben, wenn Sie uns diese freiwillig mitteilen (z. B. über ein Kontaktformular oder per E-Mail). Eine Weitergabe Ihrer Daten an Dritte erfolgt nicht ohne Ihre ausdrückliche Einwilligung.</p>
@@ -136,8 +148,8 @@ const Impressum = () => {
             </div>
 
             {/* Letzte Aktualisierung */}
-            <div className="pt-8 border-t border-border animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-              <p className="text-sm text-muted-foreground italic">Letzte Aktualisierung: Oktober 2025</p>
+             <div className="pt-8 border-t border-border animate-fade-in-up" style={{ animationDelay: '1s' }}>
+               <p className="text-sm text-muted-foreground italic">Letzte Aktualisierung: September 2026</p>
             </div>
           </div>
         </div>
