@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="space-y-1 text-sm text-muted-foreground">
               <p className="font-medium text-foreground">AB MEDIA TEAM LTD</p>
               <p>Company number: 15746871</p>
-              <p>{t('footer.legal.representative')}: Alice Berger</p>
+              <p>Director: Selmin Huzbasic</p>
               <p>Betriebsnummer: 10750003655</p>
               <p>USt-IdNr: DE 7909418491</p>
             </div>
