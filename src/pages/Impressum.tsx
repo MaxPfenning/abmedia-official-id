@@ -73,8 +73,6 @@ const Impressum = () => {
                 <p>Company type: Private limited company</p>
                 <p>Incorporated on: 28 May 2024</p>
                 <p>Nature of business (SIC): 63110 — Data processing, hosting and related activities</p>
-                <p>Betriebsnummer: 10750003655</p>
-                <p>Umsatzsteuer-Identifikationsnummer (USt-IdNr.): DE 7909418491</p>
                 <p className="mt-3">Zuständig für: Deutschland</p>
               </div>
             </div>
