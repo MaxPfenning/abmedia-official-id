@@ -302,7 +302,7 @@ export const de = {
   footer: {
     company: {
       title: "Unternehmen",
-      description: "My Review Media - Ihr vertrauenswürdiger Partner für digitale Marketing-Lösungen in Deutschland.",
+      description: "AB MEDIA TEAM LTD - Ihr vertrauenswürdiger Partner für digitale Marketing-Lösungen.",
     },
     contact: {
       title: "Kontakt",
@@ -324,7 +324,7 @@ export const de = {
       privacy: "Datenschutz",
       terms: "AGB",
     },
-    copyright: "© {year} My Review Media. Alle Rechte vorbehalten.",
+    copyright: "© {year} AB MEDIA TEAM LTD. Alle Rechte vorbehalten.",
   },
   
   fab: {
