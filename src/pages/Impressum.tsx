@@ -39,8 +39,8 @@ const Impressum = () => {
               <h2 className="text-2xl font-bold text-foreground mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="space-y-2 text-muted-foreground">
                 <p className="text-lg font-semibold text-foreground">AB MEDIA TEAM LTD</p>
-                <p>Digital Marketing Services</p>
-                <p>Vertreten durch: <span className="text-foreground font-medium">Alice Berger</span></p>
+                <p>Private limited company</p>
+                <p>Vertreten durch: <span className="text-foreground font-medium">Selmin Huzbasic, Director</span></p>
               </div>
             </div>
 
@@ -69,6 +69,10 @@ const Impressum = () => {
               <h3 className="text-xl font-bold text-foreground mb-3">Registrierungsnummern:</h3>
               <div className="space-y-2 text-muted-foreground">
                 <p>Company number: 15746871</p>
+                <p>Company status: Active</p>
+                <p>Company type: Private limited company</p>
+                <p>Incorporated on: 28 May 2024</p>
+                <p>Nature of business (SIC): 63110 — Data processing, hosting and related activities</p>
                 <p>Betriebsnummer: 10750003655</p>
                 <p>Umsatzsteuer-Identifikationsnummer (USt-IdNr.): DE 7909418491</p>
                 <p className="mt-3">Zuständig für: Deutschland</p>
@@ -79,7 +83,7 @@ const Impressum = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
               <div className="space-y-1 text-muted-foreground">
-                <p className="font-medium text-foreground">Alice Berger</p>
+                <p className="font-medium text-foreground">Selmin Huzbasic</p>
                 <p>AB MEDIA TEAM LTD</p>
                 <p>23 Grosvenor St</p>
                 <p>London, England</p>
