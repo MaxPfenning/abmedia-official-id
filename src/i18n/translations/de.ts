@@ -103,9 +103,64 @@ export const de = {
         title: "Online-Reputationsmanagement",
         description: "Schützen und verbessern Sie Ihre digitale Reputation mit proaktiven Überwachungs- und Reaktionsstrategien.",
       },
+  ],
+  },
+
+  packages: {
+    badge: "Unsere Pakete",
+    heading: "Webdesign & Google SEO Pakete",
+    subheading: "Wählen Sie das Paket, das zu Ihren Zielen passt – fordern Sie noch heute Ihr persönliches Angebot an",
+    requestOffer: "Angebot anfordern",
+    recommended: "Empfohlen",
+    items: [
+      {
+        title: "Webdesign SILVER Package",
+        description: "Der perfekte Einstieg für Ihre professionelle Web-Präsenz.",
+        features: [
+          "Responsive Website (bis zu 5 Seiten)",
+          "Modernes, professionelles Design",
+          "Kontaktformular-Integration",
+          "Mobil optimiert",
+          "Basis-SEO-Setup",
+        ],
+      },
+      {
+        title: "Webdesign GOLD Package",
+        description: "Alles aus Silver – für Unternehmen, die mehr wollen.",
+        features: [
+          "Alles aus Silver",
+          "Bis zu 10 Seiten",
+          "Individuelles Premium-Design",
+          "Erweiterte On-Page-SEO",
+          "Blog-/News-Bereich",
+          "Priority-Support",
+        ],
+      },
+      {
+        title: "Google SEO SILVER Package",
+        description: "Mehr Sichtbarkeit auf Google mit bewährten SEO-Grundlagen.",
+        features: [
+          "Keyword- & Wettbewerbsanalyse",
+          "On-Page-Optimierung",
+          "Google My Business Optimierung",
+          "Monatlicher Performance-Bericht",
+        ],
+      },
+      {
+        title: "Google SEO GOLD Package",
+        description: "Alles aus Silver – für maximales Wachstum und Reichweite.",
+        features: [
+          "Alles aus Silver",
+          "Content-Erstellung",
+          "Link-Aufbau",
+          "Bewertungsmanagement",
+          "Local-SEO-Fokus",
+          "Monatliches Strategiegespräch",
+        ],
+      },
     ],
   },
-  
+
   results: {
     badge: "Erfolgsgeschichten",
     heading: "Bewährte Ergebnisse über alle Branchen",
