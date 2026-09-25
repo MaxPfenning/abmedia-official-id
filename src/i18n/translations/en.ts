@@ -103,9 +103,64 @@ export const en = {
         title: "Online Reputation Management",
         description: "Protect and enhance your digital reputation with proactive monitoring and response strategies.",
       },
+  ],
+  },
+
+  packages: {
+    badge: "Our Packages",
+    heading: "Webdesign & Google SEO Packages",
+    subheading: "Choose the package that fits your goals — request your personal offer today",
+    requestOffer: "Request Offer",
+    recommended: "Recommended",
+    items: [
+      {
+        title: "Webdesign SILVER Package",
+        description: "The perfect start for your professional web presence.",
+        features: [
+          "Responsive website (up to 5 pages)",
+          "Modern, professional design",
+          "Contact form integration",
+          "Mobile optimized",
+          "Basic SEO setup",
+        ],
+      },
+      {
+        title: "Webdesign GOLD Package",
+        description: "Everything in Silver — for businesses that want more.",
+        features: [
+          "Everything in Silver",
+          "Up to 10 pages",
+          "Custom premium design",
+          "Advanced on-page SEO",
+          "Blog / news area",
+          "Priority support",
+        ],
+      },
+      {
+        title: "Google SEO SILVER Package",
+        description: "More visibility on Google with proven SEO fundamentals.",
+        features: [
+          "Keyword & competitor analysis",
+          "On-page optimization",
+          "Google My Business optimization",
+          "Monthly performance report",
+        ],
+      },
+      {
+        title: "Google SEO GOLD Package",
+        description: "Everything in Silver — for maximum growth and reach.",
+        features: [
+          "Everything in Silver",
+          "Content creation",
+          "Link building",
+          "Review management",
+          "Local SEO focus",
+          "Monthly strategy call",
+        ],
+      },
     ],
   },
-  
+
   results: {
     badge: "Success Stories",
     heading: "Proven Results Across Industries",

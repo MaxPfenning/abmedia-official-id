@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
@@ -27,6 +27,18 @@ const ContactForm = () => {
     service: "",
     message: "",
   });
+
+  useEffect(() => {
+    const handlePackageSelect = (e: Event) => {
+      const service = (e as CustomEvent<string>).detail;
+      if (service) {
+        setFormData((prev) => ({ ...prev, service }));
+      }
+    };
+    window.addEventListener("package-select", handlePackageSelect);
+    return () => window.removeEventListener("package-select", handlePackageSelect);
+  }, []);
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
