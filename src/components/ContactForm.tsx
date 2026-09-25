@@ -28,6 +28,18 @@ const ContactForm = () => {
     message: "",
   });
 
+  useEffect(() => {
+    const handlePackageSelect = (e: Event) => {
+      const service = (e as CustomEvent<string>).detail;
+      if (service) {
+        setFormData((prev) => ({ ...prev, service }));
+      }
+    };
+    window.addEventListener("package-select", handlePackageSelect);
+    return () => window.removeEventListener("package-select", handlePackageSelect);
+  }, []);
+
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);

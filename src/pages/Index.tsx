@@ -5,6 +5,7 @@ import TrustSignals from "@/components/TrustSignals";
 import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import Services from "@/components/Services";
+import Packages from "@/components/Packages";
 import StatsSection from "@/components/StatsSection";
 import Results from "@/components/Results";
 import Guarantee from "@/components/Guarantee";
