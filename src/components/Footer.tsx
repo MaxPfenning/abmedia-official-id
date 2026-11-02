@@ -61,7 +61,6 @@ const Footer = () => {
             <div className="space-y-1 text-sm text-muted-foreground">
               <p className="font-medium text-foreground">AB MEDIA TEAM LTD</p>
               <p>Company number: 15746871</p>
-              <p>Director: Selmin Huzbasic</p>
             </div>
              <div className="mt-5 border-t border-border pt-4">
                <h4 className="mb-2 font-semibold text-foreground">Bankverbindung</h4>

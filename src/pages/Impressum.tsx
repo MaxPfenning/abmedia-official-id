@@ -40,7 +40,6 @@ const Impressum = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p className="text-lg font-semibold text-foreground">AB MEDIA TEAM LTD</p>
                 <p>Private limited company</p>
-                <p>Vertreten durch: <span className="text-foreground font-medium">Selmin Huzbasic, Director</span></p>
               </div>
             </div>
 
@@ -89,17 +88,6 @@ const Impressum = () => {
                </div>
              </div>
 
-            {/* Verantwortlich für den Inhalt */}
-             <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
-              <div className="space-y-1 text-muted-foreground">
-                <p className="font-medium text-foreground">Selmin Huzbasic</p>
-                <p>AB MEDIA TEAM LTD</p>
-                <p>23 Grosvenor St</p>
-                <p>London, England</p>
-                <p>W1K 4QJ</p>
-              </div>
-            </div>
 
             {/* Haftungsausschluss */}
              <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
